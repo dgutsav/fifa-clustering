@@ -17,4 +17,7 @@ class Sample{
         System.out.print(this.name+" ");
         this.coordinate.dispCoordinates();
     }
+    void setBase100(){
+        
+    }
 }

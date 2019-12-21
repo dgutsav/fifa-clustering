@@ -34,4 +34,10 @@ class Coordinates{
         dist = Math.sqrt(dist);
         return dist;
     }
+    double getAttribute(String x){
+        for(int i=0;i<num_attributes;i++){
+            if(x.equalsIgnoreCase(attributes[i]))
+                return attributes[i];
+        }
+    }
 }
