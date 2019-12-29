@@ -13,7 +13,7 @@ class Main{
         String str[];
         try{
             String line;
-            BufferedReader csvReader = new BufferedReader(new FileReader("fut17.csv"));
+            BufferedReader csvReader = new BufferedReader(new FileReader("csv_files/fut17.csv"));
             while ((line = csvReader.readLine()) != null) {
                 str = line.split(",");
                 Sample sample=new Sample();
@@ -23,6 +23,7 @@ class Main{
                 sample.maxout(max, sample.listAttributes(ratings, max, positions));
                 samples.add(sample);
             }
+            csvReader.close();
         }
         catch(IOException e){
             System.out.println("File could not be read");
@@ -186,7 +187,7 @@ class Main{
     }
     public static void loadPositions(){
         populatePositions();
-        File file = new File("positions.csv");
+        File file = new File("csv_files/positions.csv");
         String line;
         String parts[];
         try{

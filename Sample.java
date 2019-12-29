@@ -9,6 +9,9 @@ class Sample{
         coordinate = new Coordinates();
         maxed_out_coordinate = new Coordinates();
     }
+    public void setCoordinate(Coordinates c){
+        c.copy(this.coordinate);
+    }
     public void set(String s[]){
         this.name = s[0] + " " + s[1];
         if(name.charAt(0) >= 97 && name.charAt(0) <= 122)
